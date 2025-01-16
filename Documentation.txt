@@ -1,0 +1,177 @@
+Munazza Abdul.Rehman
+Friday 9am to 12pm
+Hackathon Day(2)Technical Documentation
+
+General E-commerce is a online platform where you can buy or selling product or good service through online platform.                                    
+furniture Market place technical foundation-sofa, chair,office chair
+
+1:Fronted-requirement:-
+(1)Homepage:this page will show main products such as:-Sofa ,Chair 
+(2)Product listing page:this page show list of all products available for purchase
+(3)Product detailed page:when a customers select a product (like a chair)they will see detailed information about the product on this page
+(4)Cart page:this page will show the item selected by customers for purchase
+(5)Responsive:all type-screen 
+
+Third-Party Integrations:
+   - Recognizing the need for payment gateways and shipment tracking via APIs shows understanding of critical marketplace features.  
+
+ System Architecture Workflow: 
+   - Step-by-step explanation of how data flows between the frontend, backend, and APIs is accurate and demonstrates technical clarity.    
+
+[Frontend (Next.js)]  
+   |  
+   v  
+[Sanity CMS (Backend + Database)]  
+   |  
+   v  
+[3rd Party APIs]  
+
+
++---------------------------+
+|       Frontend (Next.js)       |  
+|----------------------------|
+| - Product Listing Page        |  
+| - Product Details Page        |  
+| - Cart Management             |  
+|         |  
+| - Order Confirmation Page    |  
++---------------------------+
+             | 
+             v
++----------------------------+
+|        Backend (Sanity CMS)      |  
+|--------------------------------|
+| - Product Data API                     |  
+| - Order Management API            |  
+| - Customer Data Storage            |  
++----------------------------+
+             | 
+             v
++---------------------------------+
+|       Third-Party Services          |  
+|---------------------------------|
+| - Shipment Tracking API              |  
+| - Payment Gateway Integration     |  
+|     |  
++---------------------------------+
+
++-------------------------+
+|       Database (Sanity)         |  
+|--------------------------|
+| - Products                        |  
+| - Orders                          |  
+| - Customers                     |  
+| - Shipments                    |  
++-------------------------+
+
+3:Plan API Requirement:-
+.General e commerce 
+//product
+export default{
+name:"product"
+{
+  "id": 1,
+  "name": "Product A",
+  "price": 100,
+  "stock": 20,
+  "image": "/image.jpg"
+}
+};
+...........................................................
+//order
+export default
+name:"order" {
+  "customerName": "John Doe",
+  "productId": 1,
+  "quantity": 2,
+  "paymentStatus": "Paid"
+}
+ {
+  "orderId": 12345,
+  "status": "Order Placed"
+}
+//shipment
+export default{
+  "shipmentId": "SHIP123",
+  "orderId": 12345,
+  "status": "In Transit",
+  "expectedDelivery": "2025-01-20"
+}
+                                                                                                                                                                                
+
+
+Sanity schema example:
+
+export default{
+name:product,
+type: document, 
+ fields: [
+    { name: "name", title: "Product Name", type: "string" },
+    { name: "price", title: "Price", type: "number" },
+]
+};
+
+
+
+Conclusion:
+                    this documentation outline the technical foundation General E-commerce is a online platform,it includes the system archieture,  
+keyflows, Api endpoint and sanity schema example
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
